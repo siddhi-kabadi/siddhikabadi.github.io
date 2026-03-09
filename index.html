@@ -25,7 +25,7 @@
     .nav-link.project-link{color:var(--sage);}
     .nav-link.project-link:hover{color:var(--rust);}
 
-    /* ── BROWN GREETING BANNER ── */
+    /* BROWN GREETING BANNER */
     .brown-banner{background:var(--ink);color:var(--cream);padding:8rem 3rem 5rem;position:relative;overflow:hidden;}
     .brown-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, rgba(192,4,4,0.15) 0%, transparent 60%);}
     .brown-banner-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;position:relative;z-index:1;}
@@ -41,7 +41,7 @@
     .brown-logo-label{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(237,227,218,0.4);text-align:center;}
     .brown-divider{height:1px;background:linear-gradient(to right, var(--rust), transparent);max-width:1000px;margin:0 auto;}
 
-    /* HERO — two column */
+    /* HERO */
     .hero{min-height:100vh;display:grid;grid-template-columns:1fr 380px;gap:5rem;align-items:center;padding:7rem 3rem 5rem;max-width:1000px;margin:0 auto;position:relative;}
     .hero-rule{position:absolute;left:50%;top:20%;width:1px;height:55%;background:linear-gradient(to bottom,transparent,var(--border),transparent);}
     .eyebrow{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.6s ease 0.2s forwards;}
@@ -50,15 +50,13 @@
     .hero-role{font-family:'DM Mono',monospace;font-size:0.8rem;letter-spacing:0.06em;color:var(--sage);margin-bottom:2rem;opacity:0;animation:fadeUp 0.7s ease 0.5s forwards;}
     .hero-bio{font-size:1.05rem;color:var(--ink-light);line-height:1.85;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.7s ease 0.65s forwards;}
     .hero-bio strong{color:var(--ink);}
-    .hero-cta{display:flex;gap:0.75rem;flex-wrap:wrap;opacity:0;animation:fadeUp 0.7s ease 0.8s forwards;}
+    .hero-cta{display:flex;gap:0.75rem;flex-wrap:wrap;opacity:0;animation:fadeUp 0.7s ease 0.8s forwards;margin-top:0.5rem;}
 
-    /* PHOTO BLOCK */
+    /* PHOTO */
     .hero-right{opacity:0;animation:fadeUp 0.8s ease 0.5s forwards;}
     .photo-frame{position:relative;}
-    .photo-placeholder{width:100%;aspect-ratio:3/4;background:var(--cream);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden;}
-    .photo-placeholder::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(216,208,196,0.3) 20px,rgba(216,208,196,0.3) 21px);}
-    .photo-placeholder-icon{font-size:2.5rem;position:relative;z-index:1;}
-    .photo-placeholder-text{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--border);text-align:center;position:relative;z-index:1;line-height:1.6;}
+    .photo-placeholder{width:100%;aspect-ratio:3/4;background:var(--cream);border:1px solid var(--border);overflow:hidden;}
+    .photo-placeholder img{width:100%;height:100%;object-fit:cover;display:block;}
     .photo-caption{margin-top:1rem;padding:1rem 1.25rem;border:1px solid var(--border-l);background:var(--cream);}
     .photo-caption-name{font-size:0.95rem;font-weight:600;color:var(--ink);display:block;margin-bottom:0.15rem;}
     .photo-caption-sub{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--sage);letter-spacing:0.05em;}
@@ -83,10 +81,11 @@
 
     /* RESEARCH */
     .research-card{background:var(--cream);border:1px solid var(--border);padding:2rem 2rem 2rem 2.5rem;position:relative;margin-bottom:1.25rem;}
+    .research-card:last-child{margin-bottom:0;}
     .research-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold);}
-    .research-label{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
+    .research-label{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;line-height:1.5;}
     .research-title{font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:0.3rem;}
-    .research-meta{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--sage);margin-bottom:0.75rem;}
+    .research-meta{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--sage);margin-bottom:0.75rem;line-height:1.6;}
     .research-desc{font-size:0.95rem;color:var(--ink-light);margin:0;}
 
     /* SKILLS */
@@ -121,8 +120,6 @@
     .btn:hover{background:var(--ink);color:var(--warm);}
     .btn.primary{background:var(--rust);border-color:var(--rust);color:white;}
     .btn.primary:hover{background:#A00303;border-color:#A00303;}
-    .btn.gold{border-color:var(--gold);color:var(--gold);}
-    .btn.gold:hover{background:var(--gold);color:white;}
 
     /* FOOTER */
     footer{border-top:1px solid var(--border);padding:2rem 3rem;max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
@@ -132,9 +129,7 @@
     /* REVEAL */
     .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.7s ease,transform 0.7s ease;}
     .reveal.visible{opacity:1;transform:none;}
-
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
-    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 
     @media(max-width:780px){
       nav{padding:0 1.5rem;}
@@ -164,36 +159,27 @@
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     BROWN UNIVERSITY GREETING BANNER
-══════════════════════════════════════════ -->
+<!-- BROWN UNIVERSITY GREETING BANNER -->
 <div class="brown-banner">
   <div class="brown-banner-inner">
     <div>
       <div class="brown-greeting-label">Brown University · MS Cybersecurity Application</div>
       <h1>Hi, Brown<br><em>Cybersecurity</em><br>Masters Team.</h1>
       <p>
-        My name is <strong>Siddhi Kabadi</strong> — thank you for taking the time to visit my portfolio. I'm a senior computer science student at Santa Clara University with a concentration in <strong>cybersecurity</strong> and minors in <strong>mathematics </strong> and <strong>economics </strong>.
+        My name is <strong>Siddhi Kabadi</strong> — thank you for taking the time to visit my portfolio. I'm a senior computer science student at Santa Clara University with a concentration in <strong>cybersecurity</strong> and minors in <strong>mathematics</strong> and <strong>economics</strong>.
       </p>
       <p>
         This site is a collection of my research work. I built it specifically for my application so you can explore my projects in depth. I hope it gives you a real sense of how I think, what I care about, and what I'd bring to Brown.
       </p>
     </div>
     <div class="brown-logo-block">
-      <!-- Brown University Official Crest SVG -->
       <svg class="brown-logo-svg" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Shield shape -->
         <path d="M80 4 L152 4 L152 130 Q152 172 80 196 Q8 172 8 130 L8 4 Z" fill="#C00404" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
-        <!-- Inner shield border -->
         <path d="M80 14 L142 14 L142 128 Q142 165 80 186 Q18 165 18 128 L18 14 Z" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-        <!-- Horizontal divider -->
         <line x1="18" y1="72" x2="142" y2="72" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-        <!-- Vertical divider -->
         <line x1="80" y1="14" x2="80" y2="72" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-        <!-- Stars in top quadrants -->
         <text x="44" y="52" text-anchor="middle" font-size="18" fill="white" opacity="0.9">✦</text>
         <text x="116" y="52" text-anchor="middle" font-size="18" fill="white" opacity="0.9">✦</text>
-        <!-- Open book bottom -->
         <rect x="38" y="82" width="84" height="58" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
         <line x1="80" y1="82" x2="80" y2="140" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
         <line x1="48" y1="96" x2="72" y2="96" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
@@ -202,7 +188,6 @@
         <line x1="88" y1="96" x2="112" y2="96" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
         <line x1="88" y1="104" x2="112" y2="104" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
         <line x1="88" y1="112" x2="112" y2="112" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
-        <!-- VERITAS ET FIDES text on book -->
         <text x="80" y="133" text-anchor="middle" font-family="Georgia, serif" font-size="5.5" fill="rgba(255,255,255,0.7)" letter-spacing="0.5">VERITAS ET FIDES</text>
       </svg>
       <div class="brown-logo-label">Brown University<br/>Providence, RI · Est. 1764</div>
@@ -211,9 +196,7 @@
 </div>
 <div class="brown-divider"></div>
 
-<!-- ══════════════════════════════════════════
-     HERO — ABOUT ME
-══════════════════════════════════════════ -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-rule"></div>
   <div class="hero-left">
@@ -224,7 +207,9 @@
       I'm drawn to research at the intersection of <strong>machine learning, security, and systems</strong> — questions that matter both technically and in the real world. From analyzing password vulnerability with fine-tuned language models to building solar-powered IoT infrastructure for community farms, my work has always been motivated by impact alongside rigor.
     </p>
     <p class="hero-bio">
-      This past year I was selected as an <strong>NSF REU researcher at the University of Louisville</strong>, where I studied privacy alongside human-computer interaction. 
+      This past year I was selected as an <strong>NSF REU researcher at the University of Louisville</strong>, where I studied privacy alongside human-computer interaction.
+    </p>
+    <div class="hero-cta">
       <a href="/resume.pdf" download class="btn primary">↙ Download Resume</a>
       <a href="mailto:YOUR-EMAIL@scu.edu" class="btn">Get in Touch</a>
     </div>
@@ -232,9 +217,9 @@
 
   <div class="hero-right">
     <div class="photo-frame">
-     <div class="photo-placeholder">
-  <img src="siddhi.jpeg" alt="Siddhi Kabadi" style="width:100%; height:100%; object-fit:cover;">
-</div>
+      <div class="photo-placeholder">
+        <img src="siddhi.jpeg" alt="Siddhi Kabadi">
+      </div>
       <div class="photo-caption">
         <span class="photo-caption-name">Siddhi Kabadi</span>
         <span class="photo-caption-sub">Santa Clara University · Class of 2026</span>
@@ -267,7 +252,7 @@
   <section class="reveal">
     <div class="sec-head"><span class="sec-num">02</span><h2>Research Experience</h2></div>
     <div class="research-card">
-      <div class="research-label">2025 Summer Research Intern | IMECE Poster & MDPI Sensors Journal Publication (In-Progress)</div>
+      <div class="research-label">2025 Summer Research Intern · IMECE Poster &amp; MDPI Sensors Journal Publication (In-Progress)</div>
       <div class="research-title">NSF REU Researcher</div>
       <div class="research-meta">University of Louisville &nbsp;·&nbsp; National Science Foundation REU Program &nbsp;·&nbsp; Advisor: Dr. Faisal Aqlan</div>
       <p class="research-desc">Researched human-computer interaction in VR digital twin systems, analyzing eye-tracking and usability data while designing privacy-aware access controls.</p>
@@ -276,18 +261,18 @@
       <div class="research-label">ACM-W Cascadia Computing Conference Poster</div>
       <div class="research-title">ML Analysis of Password Strength</div>
       <div class="research-meta">Santa Clara University &nbsp;·&nbsp; ACM-W &nbsp;·&nbsp; Advisor: Dr. Shiva Houshmand</div>
-      <p class="research-desc"> Fine-tuned BERT on 468k labeled passwords to analyze password bias, structural vulnerability, and the relationship between linguistic features and strength classifications. Achieved 87% accuracy, 0.81 F1.</p>
+      <p class="research-desc">Fine-tuned BERT on 468k labeled passwords to analyze password bias, structural vulnerability, and the relationship between linguistic features and strength classifications. Achieved 87% accuracy, 0.81 F1.</p>
     </div>
     <div class="research-card">
-      <div class="research-label">IEEE MIT URTC | IEEE GHTC | IEEE Silicon Valley Board Research Presentation/div>
+      <div class="research-label">IEEE MIT URTC · IEEE GHTC · IEEE Silicon Valley Board Research Presentation</div>
       <div class="research-title">Hydration Automation — Smart IoT Irrigation</div>
       <div class="research-meta">Santa Clara University &nbsp;·&nbsp; MIT IEEE URTC 2025 &nbsp;·&nbsp; Advisor: Dr. Navid Shaghaghi (Frugal Innovation Hub)</div>
       <p class="research-desc">Designed and deployed a low-cost, solar-powered IoT irrigation system for Veggielution community farm in San Jose. Built soil moisture sensing units, LoRa radio communication, a custom energy protocol, and a real-time Next.js dashboard.</p>
     </div>
-     <div class="research-card">
+    <div class="research-card">
       <div class="research-label">Quarter Capstone Project</div>
-      <div class="research-title">Click Cleverly - Privacy Policies </div>
-      <div class="research-meta">Santa Clara University  &nbsp;·&nbsp; Advisor: Dr. Kai Lukoff </div>
+      <div class="research-title">Click Cleverly - Privacy Policies</div>
+      <div class="research-meta">Santa Clara University &nbsp;·&nbsp; Advisor: Dr. Kai Lukoff</div>
       <p class="research-desc">Explored digital consent and dark patterns in privacy policies by analyzing Terms of Service agreements and designing a privacy-aware interface prototype that helps users understand legal risk and make informed decisions.</p>
     </div>
   </section>
@@ -359,20 +344,18 @@
         </div>
       </a>
       <a href="https://medium.com/@aimalik/click-cleverly-making-terms-of-service-crystal-clear-6fb8af7c5756" class="project-card" target="_blank">
-  <div class="project-type">Privacy · HCI · Digital Consent</div>
-  <div class="project-title">Click Cleverly</div>
-  <p class="project-desc">Privacy design project analyzing dark patterns in Terms of Service agreements and prototyping a Figma interface that translates complex legal clauses into clear risk indicators and user-friendly consent decisions.</p>
-  <div class="project-tags">
-    <span class="project-tag">Figma</span>
-    <span class="project-tag">Digital Consent</span>
-    <span class="project-tag">Privacy Design</span>
-    <span class="project-tag">HCI</span>
-  </div>
-</a>
+        <div class="project-type">Privacy · HCI · Digital Consent</div>
+        <div class="project-title">Click Cleverly</div>
+        <p class="project-desc">Privacy design project analyzing dark patterns in Terms of Service agreements and prototyping a Figma interface that translates complex legal clauses into clear risk indicators and user-friendly consent decisions.</p>
+        <div class="project-tags">
+          <span class="project-tag">Figma</span>
+          <span class="project-tag">Digital Consent</span>
+          <span class="project-tag">Privacy Design</span>
+          <span class="project-tag">HCI</span>
+        </div>
+      </a>
     </div>
   </section>
-
-  
 
   <!-- CONTACT -->
   <section class="reveal">
